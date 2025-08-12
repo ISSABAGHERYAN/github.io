@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>ISSA</title>
-    <meta name="description" content="ART DIRECTOR/DESIGNER MAKING CONCEPTUAL WORK FOR BOLD BRANDS">
+    <meta name="description" content="ART DIRECTOR/DESIGNER MAKING CONCEPTUAL WORK FOR BOLD BRANDS" />
 
     <style>
         * {
@@ -122,12 +122,12 @@
 
     <div class="viewport">
         <!-- All images for the alternating effect -->
-        <img src="https://picsum.photos/1920/1080?random=1" alt="Intro">
-        <img src="https://picsum.photos/1920/1080?random=2" alt="Project 1" style="display:none;">
-        <img src="https://picsum.photos/1920/1080?random=3" alt="Project 2" style="display:none;">
-        <img src="https://picsum.photos/1920/1080?random=4" alt="Project 3" style="display:none;">
-        <img src="https://picsum.photos/1920/1080?random=5" alt="Project 4" style="display:none;">
-        <img src="https://picsum.photos/1920/1080?random=6" alt="Project 5" style="display:none;">
+        <img src="https://picsum.photos/1920/1080?random=1" alt="Intro" />
+        <img src="https://picsum.photos/1920/1080?random=2" alt="Project 1" style="display:none;" />
+        <img src="https://picsum.photos/1920/1080?random=3" alt="Project 2" style="display:none;" />
+        <img src="https://picsum.photos/1920/1080?random=4" alt="Project 3" style="display:none;" />
+        <img src="https://picsum.photos/1920/1080?random=5" alt="Project 4" style="display:none;" />
+        <img src="https://picsum.photos/1920/1080?random=6" alt="Project 5" style="display:none;" />
 
         <div class="pages">
             <!-- 1. Intro Text -->
@@ -137,12 +137,15 @@
                     <p>MAKING CONCEPTUAL WORK FOR BOLD BRANDS AND CAMPAIGNS</p>
                 </center>
             </div>
-            
+
             <!-- 2. Project 1 Text -->
             <div class="page">
                 <center>
                     <h2>BRAND IDENTITY SYSTEM</h2>
-                    <p class="project-description">A comprehensive visual identity for a forward-thinking tech startup, including logo design, typography, and brand guidelines.</p>
+                    <p class="project-description">
+                        A comprehensive visual identity for a forward-thinking tech startup, including logo design,
+                        typography, and brand guidelines.
+                    </p>
                     <a href="#" class="visit-project">Visit Project</a>
                 </center>
             </div>
@@ -151,7 +154,10 @@
             <div class="page">
                 <center>
                     <h2>EDITORIAL CAMPAIGN</h2>
-                    <p class="project-description">Art direction and design for a luxury fashion magazine spread, combining bold typography with striking photography.</p>
+                    <p class="project-description">
+                        Art direction and design for a luxury fashion magazine spread, combining bold typography with
+                        striking photography.
+                    </p>
                     <a href="#" class="visit-project">Visit Project</a>
                 </center>
             </div>
@@ -160,7 +166,10 @@
             <div class="page">
                 <center>
                     <h2>DIGITAL EXPERIENCE</h2>
-                    <p class="project-description">Interactive web experience for an art gallery, featuring custom animations and immersive storytelling.</p>
+                    <p class="project-description">
+                        Interactive web experience for an art gallery, featuring custom animations and immersive
+                        storytelling.
+                    </p>
                     <a href="#" class="visit-project">Visit Project</a>
                 </center>
             </div>
@@ -169,7 +178,10 @@
             <div class="page">
                 <center>
                     <h2>PACKAGING DESIGN</h2>
-                    <p class="project-description">Sustainable packaging solution for a premium skincare brand, balancing minimalism with shelf impact.</p>
+                    <p class="project-description">
+                        Sustainable packaging solution for a premium skincare brand, balancing minimalism with shelf
+                        impact.
+                    </p>
                     <a href="#" class="visit-project">Visit Project</a>
                 </center>
             </div>
@@ -178,7 +190,10 @@
             <div class="page">
                 <center>
                     <h2>MUSIC VISUAL IDENTITY</h2>
-                    <p class="project-description">Complete visual system for an electronic music artist, including album artwork, merchandise, and live show visuals.</p>
+                    <p class="project-description">
+                        Complete visual system for an electronic music artist, including album artwork, merchandise,
+                        and live show visuals.
+                    </p>
                     <a href="#" class="visit-project">Visit Project</a>
                 </center>
             </div>
@@ -196,10 +211,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(function(){
-            setTimeout(function(){
-                scrollTo(0,-1);
-            },0);
+        $(function () {
+            setTimeout(function () {
+                scrollTo(0, -1);
+            }, 0);
 
             var i = 1;
             var t = 1;
@@ -208,60 +223,60 @@
             var timer = 0;
             var currentImageIndex = 0;
 
-            $("html,body").keypress(function(event) {
+            $("html,body").keypress(function (event) {
                 if (event.which == 112) {
-                    $("html,body").animate({"scrollTop":30000},100000,"linear")
+                    $("html,body").animate({ scrollTop: 30000 }, 100000, "linear");
                 }
-            })
+            });
 
             $("html,body").scrollTop(0);
 
             $("img").width($(window).width());
 
-            $(window).on("click",function(){
-                if($(window).scrollTop() == 0){
-                    $("html,body").animate({"scrollTop":$(".viewport").height()})
+            $(window).on("click", function () {
+                if ($(window).scrollTop() == 0) {
+                    $("html,body").animate({ scrollTop: $(".viewport").height() });
                 }
-            })
+            });
 
-            function init(){
+            function init() {
                 $("img").width($(window).width());
                 console.log("initialized");
             }
 
-            $(window).on("resize",function(){
+            $(window).on("resize", function () {
                 console.log("resize");
                 init();
             });
 
-            $(window).on("scroll",function(){
+            $(window).on("scroll", function () {
                 var cur = $(window).scrollTop();
-                
-                //Image sizing
-                if(t == 0 ){
-                    var math = cur - $(".viewport").height()*(i-1);
+
+                // Image sizing
+                if (t == 0) {
+                    var math = cur - $(".viewport").height() * (i - 1);
                     $("img:visible").height(math);
-                }else{
-                    var math = $(".viewport").height()*(i)- cur;
+                } else {
+                    var math = $(".viewport").height() * i - cur;
                     $("img:visible").height(math);
                 }
 
-                //trigger
-                if(cur > $(".viewport").height()*i){
+                // trigger
+                if (cur > $(".viewport").height() * i) {
                     i++;
                     togglePosition();
-                    $("html,body").height($("html,body").height()+$(".viewport").height())
+                    $("html,body").height($("html,body").height() + $(".viewport").height());
                 }
 
-                //scrolling up
-                if(cur + 5 < $(".viewport").height()*i - ($(".viewport").height())){
+                // scrolling up
+                if (cur + 5 < $(".viewport").height() * i - $(".viewport").height()) {
                     i--;
                     togglePosition();
-                    down = 1
+                    down = 1;
                 }
 
-                //reset 
-                if(cur <= 0){
+                // reset
+                if (cur <= 0) {
                     console.log("reset");
                     $(".page.a").removeClass("a");
                     $(".page").eq(0).addClass("a");
@@ -269,50 +284,53 @@
                     $("img").hide().eq(0).show();
                 }
 
-                //change text and images
-                if($("img:visible").height() == $(".viewport").height() && cur > 10){
-                    if(timer == 0){
+                // change text and images
+                if ($("img:visible").height() == $(".viewport").height() && cur > 10) {
+                    if (timer == 0) {
                         timer = 1;
                         text();
-                        setTimeout(function(){
+                        setTimeout(function () {
                             timer = 0;
-                        },300)
+                        }, 300);
                     }
                 }
 
-                //alternate images when they collapse
-                if($("img:visible").height() <= 0){
+                // alternate images when they collapse
+                if ($("img:visible").height() <= 0) {
                     currentImageIndex++;
-                    if(currentImageIndex >= $("img").length) {
+                    if (currentImageIndex >= $("img").length) {
                         currentImageIndex = 0;
                     }
                     $("img").hide().eq(currentImageIndex).show();
                 }
             });
 
-            function togglePosition(){
-                if (i%2 == 0){
+            function togglePosition() {
+                if (i % 2 == 0) {
                     t = 0;
-                    $("img").css({"top":"auto","bottom":"0"});
-                }else{
+                    $("img").css({ top: "auto", bottom: "0" });
+                } else {
                     t = 1;
-                    $("img").css({"top":"0","bottom":"auto"});
+                    $("img").css({ top: "0", bottom: "auto" });
                 }
             }
-            
-            function text(){
-                if($(".page.a").next().length == 0){
+
+            function text() {
+                if ($(".page.a").next().length == 0) {
                     $(".page.a").removeClass("a");
                     $(".page").eq(0).addClass("a");
-                }else{
+                } else {
                     $(".page.a").removeClass("a").next().addClass("a");
                 }
             }
 
             // Initialize
             init();
+
+            // *** THE FIX ***
+            // Set body height to viewport height times number of images, so scroll works from the start
+            $("html, body").height($(".viewport").height() * $("img").length);
         });
     </script>
-
 </body>
 </html>
